@@ -1,0 +1,36 @@
+@import './variables';
+
+.service-list {
+
+  .col-sm-12 {
+    margin-bottom: 4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-img-top, .card-title {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .show-btn {
+    background-color: transparent;
+    border: none;
+    color: $accent-color;
+
+    &:focus, &:hover {
+      background-color: transparent;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .service-list {
+    .col-sm-12 {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.btn {
+  font-size: var(--main-text);
+  font-weight: bold;
+  line-height: 2.7rem;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {--width: #{$i};}
+}

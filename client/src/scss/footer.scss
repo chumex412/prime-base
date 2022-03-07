@@ -1,0 +1,140 @@
+@import './variables';
+
+.footer-top {
+  background-color: $secondary-dark;
+  padding: 5rem 0;
+}
+
+.footer-bottom {
+  padding: 3rem 0;
+  background-color: $primary-color;
+  text-align: center;
+  color: #FFFFFF;
+
+  p {
+    font-weight: 500;
+  }
+}
+
+.footer-center {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+
+  .footer-brand, .footer-sub_nav, .footer-contact {
+    padding: 0 0.75rem;
+  }
+
+  .footer-brand {
+    margin-bottom: 5rem;
+  }
+
+  .footer-sub_nav, .footer-contact {
+
+    h2 {
+      margin-bottom: 4rem;
+      font-size: 2rem;
+      line-height: 120%;
+    }
+  }
+
+  .footer-contact {
+    .footer-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      text-align: left;
+
+      &:first-child {
+        align-items: flex-start;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-list {
+    list-style: none;
+
+    .contact-text {
+      font-size: 1.25rem;
+      line-height: 150%;
+      font-weight: 500;
+    }
+  }
+
+  .footer-sub_nav {
+    margin-bottom: 5rem;
+
+    .footer-item {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+
+      &:hover, &:focus {
+        color: $light;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-top {
+    padding: 9rem 0;
+  }
+
+  .footer-center {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+
+    .footer-sub_nav, .footer-contact {
+      h2 {
+        font-size: 3rem;
+      }
+    }
+
+    .footer-brand {
+      margin-bottom: 0;
+    }
+
+    .footer-sub_nav {
+      margin-bottom: 0;
+    }
+
+    .footer-contact {
+      flex-basis: 29%;
+    }
+    
+    .footer-list {
+      .contact-text {
+        font-size: 1.45rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer-center {
+    .footer-list {
+      .contact-text {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.container {
+  max-width: 975px;
+}
+
+@for $i from 1 through 12 {
+  .col-lg-#{$i} {--width: #{$i};}
+}

@@ -1,0 +1,15 @@
+:root {
+  --base-size: 1.19rem;
+}
+
+.container {
+  max-width: 720px;
+}
+
+.btn{
+  padding: 1.5rem 4rem;
+}
+
+@for $i from 1 through 12 {
+  .col-md-#{$i} {--width: #{$i};}
+}

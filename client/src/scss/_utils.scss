@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --column: 12;
+}
+
+[class*="col-"] {
+  --width: 12;
+  --init-gap: 0.35%;
+  --gap: calc((var(--column) - var(--width)) * var(--init-gap));
+  --initial-basis: calc(var(--width) / var(--column) * 100%);
+  flex-basis: calc(var(--initial-basis) - var(--gap));
+  padding: 0 0.75rem;
+}
+
+/* Cards */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  border-radius: 1.5rem;
+  padding: 3.5rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0px 50px 100px rgba(221, 227, 226, 0.5);
+}
+
+/* End of card */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  overflow: hidden;
+}

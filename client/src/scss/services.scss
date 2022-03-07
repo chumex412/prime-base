@@ -1,0 +1,23 @@
+@import "./variables";
+
+.services {
+  padding-bottom: 15rem;
+}
+
+.services-header {
+  max-width: 622px;
+  text-align: center;
+  margin: 0 auto 9rem;
+
+  h2 {
+    span {
+      &:first-child {
+        color: $primary-color;
+      }
+
+      &:last-child {
+        color: $accent-color;
+      }
+    }
+  }
+}

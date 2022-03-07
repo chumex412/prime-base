@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --base-size: 0.95rem;
+  --type-scale: 1.15;
+  --h5: calc(var(--base-size) * var(--type-scale));
+  --main-text: calc(var(--h5) * var(--type-scale));
+  --intro-text: calc(var(--main-text) * var(--type-scale));
+  --h4: calc(var(--intro-text) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale) * var(--type-scale) * var(--type-scale) * 1.03);
+  --h2: calc(var(--h3) * var(--type-scale) * 1.05);
+  --h1: calc(var(--h2) * var(--type-scale) * 1.02);
+
+  /* Line-height */
+  --big-type: 120%;
+  --lower-type: 150%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: $off-white;
+}
+
+button, a {
+  transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+}
+
+/* Whole Utils */
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+}
+
+.h1 {
+  font-size: var(--h1);
+  line-height: var(--big-type);
+}
+
+.h2 {
+  font-size: var(--h2);
+  line-height: var(--big-type);
+}
+
+.h3 {
+  font-size: var(--h3);
+  line-height: var(--lower-type);
+}
+
+.h4 {
+  font-size: var(--h4);
+  line-height: var(--big-type);
+}
+
+.h5 {
+  font-size: var(--h5, 12px);
+  line-height: var(--lower-type);
+}
+
+.main-text {
+  font-size: var(--main-text);
+  line-height: var(--lower-type);
+}
+
+.intro-text, .top-link {
+  font-size: var(--intro-text);
+  line-height: var(--lower-type);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* End of whole utils */
+
+@import "./utils";
+@import "./extra-small";
+
+@media only screen and (min-width: 540px) {
+  @import "./small";
+}
+
+@media only screen and (min-width: 768px) {
+  @import "./medium";
+} /* End of media query */
+
+@media only screen and (min-width: 992px) {
+  @import "./large";
+} /* End of media query */
+
+@media only screen and (min-width: 1200px) {
+  @import "./extra-large";
+} /* End of media query */

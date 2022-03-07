@@ -1,0 +1,11 @@
+:root {
+  --base-size: 1.4rem;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+@for $i from 1 through 12 {
+  .col-xl-#{$i} {--width: #{$i};}
+}
