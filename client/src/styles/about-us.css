@@ -1,0 +1,30 @@
+.about {
+  padding: 11.5rem 0 15rem;
+}
+.about .about-content .about-btn {
+  background-color: #036328;
+  border: #036328;
+  color: #FFFFFF;
+}
+.about .about-left img {
+  border: 1px solid #036328;
+  filter: drop-shadow(0px 50px 100px rgba(3, 99, 40, 0.15));
+  border-radius: 15px;
+}
+.about .about-right {
+  padding-top: 5rem;
+}
+.about .about-right h2 {
+  margin-bottom: 3rem;
+}
+.about .about-right h2 span:first-child {
+  color: #036328;
+}
+.about .about-right h2 span:last-child {
+  color: #903B13;
+}
+.about .about-right p {
+  margin-bottom: 3rem;
+}
+
+/*# sourceMappingURL=about-us.css.map */

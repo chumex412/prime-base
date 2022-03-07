@@ -1,0 +1,107 @@
+.footer-top {
+  background-color: #191C23;
+  padding: 5rem 0;
+}
+
+.footer-bottom {
+  padding: 3rem 0;
+  background-color: #036328;
+  text-align: center;
+  color: #FFFFFF;
+}
+.footer-bottom p {
+  font-weight: 500;
+}
+
+.footer-center {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+.footer-center .footer-brand, .footer-center .footer-sub_nav, .footer-center .footer-contact {
+  padding: 0 0.75rem;
+}
+.footer-center .footer-brand {
+  margin-bottom: 5rem;
+}
+.footer-center .footer-sub_nav h2, .footer-center .footer-contact h2 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  line-height: 120%;
+}
+.footer-center .footer-contact .footer-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+.footer-center .footer-contact .footer-item:first-child {
+  align-items: flex-start;
+}
+.footer-center .footer-contact .footer-item:last-child {
+  margin-bottom: 0;
+}
+.footer-center .footer-list {
+  list-style: none;
+}
+.footer-center .footer-list .contact-text {
+  font-size: 1.25rem;
+  line-height: 150%;
+  font-weight: 500;
+}
+.footer-center .footer-sub_nav {
+  margin-bottom: 5rem;
+}
+.footer-center .footer-sub_nav .footer-item {
+  margin-bottom: 2.5rem;
+}
+.footer-center .footer-sub_nav .footer-item:last-child {
+  margin-bottom: 0;
+}
+.footer-center .footer-sub_nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-center .footer-sub_nav a:hover, .footer-center .footer-sub_nav a:focus {
+  color: #ABB2C4;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-top {
+    padding: 9rem 0;
+  }
+
+  .footer-center {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footer-center .footer-sub_nav h2, .footer-center .footer-contact h2 {
+    font-size: 3rem;
+  }
+  .footer-center .footer-brand {
+    margin-bottom: 0;
+  }
+  .footer-center .footer-sub_nav {
+    margin-bottom: 0;
+  }
+  .footer-center .footer-contact {
+    flex-basis: 29%;
+  }
+  .footer-center .footer-list .contact-text {
+    font-size: 1.45rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer-center .footer-list .contact-text {
+    font-size: 1.7rem;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

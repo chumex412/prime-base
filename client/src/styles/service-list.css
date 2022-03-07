@@ -1,0 +1,27 @@
+.service-list .col-sm-12 {
+  margin-bottom: 4rem;
+}
+.service-list .col-sm-12:last-child {
+  margin-bottom: 0;
+}
+.service-list .card-img-top, .service-list .card-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.service-list .show-btn {
+  background-color: transparent;
+  border: none;
+  color: #903B13;
+}
+.service-list .show-btn:focus, .service-list .show-btn:hover {
+  background-color: transparent;
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 768px) {
+  .service-list .col-sm-12 {
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=service-list.css.map */

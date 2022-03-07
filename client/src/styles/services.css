@@ -1,0 +1,17 @@
+.services {
+  padding-bottom: 15rem;
+}
+
+.services-header {
+  max-width: 622px;
+  text-align: center;
+  margin: 0 auto 9rem;
+}
+.services-header h2 span:first-child {
+  color: #036328;
+}
+.services-header h2 span:last-child {
+  color: #903B13;
+}
+
+/*# sourceMappingURL=services.css.map */
