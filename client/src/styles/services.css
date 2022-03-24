@@ -7,6 +7,12 @@
   text-align: center;
   margin: 0 auto 9rem;
 }
+.services-header h2 {
+  overflow: hidden;
+}
+.services-header h2 span {
+  display: inline-block;
+}
 .services-header h2 span:first-child {
   color: #036328;
 }

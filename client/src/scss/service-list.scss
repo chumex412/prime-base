@@ -1,8 +1,12 @@
 @import './variables';
 
 .service-list {
+  _opacity: 0;
+  _transform: translateY(60px);
+  _-moz-transform: translateY(60px);
+  _-webkit-transform: translateY(60px);
 
-  .col-sm-12 {
+  .col-xs-12 {
     margin-bottom: 4rem;
 
     &:last-child {
@@ -10,15 +14,27 @@
     }
   }
 
+  .card {
+    padding: 3.5rem 2rem;
+  }
+
   .card-img-top, .card-title {
     margin-bottom: 2rem;
     text-align: center;
+  }
+
+  .card-text {
+    .hidden {
+      overflow: hidden;
+      display: inline-block;
+    }
   }
 
   .show-btn {
     background-color: transparent;
     border: none;
     color: $accent-color;
+    cursor: pointer;
 
     &:focus, &:hover {
       background-color: transparent;
@@ -27,9 +43,9 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .service-list {
-    .col-sm-12 {
+    .col-xs-12 {
       margin-bottom: 0;
     }
   }
