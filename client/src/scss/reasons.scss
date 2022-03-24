@@ -20,6 +20,8 @@
     margin-bottom: 1rem;
 
     span {
+      display: inline-block;
+      
       &:first-child {
         color: $primary-color;
       }
@@ -39,7 +41,7 @@
   text-align: center;
   justify-content: center;
 
-  .col-sm-12 {
+  .col-xs-12 {
     margin-bottom: 5rem;
     &:last-child {
       margin-bottom: 0;
@@ -72,7 +74,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .reason {
     padding: 15rem 0;
   }
@@ -80,7 +82,7 @@
   .reason-list {
     justify-content: space-between;
 
-    .col-sm-12 {
+    .col-xs-12 {
       margin-bottom: 0;
     }
 

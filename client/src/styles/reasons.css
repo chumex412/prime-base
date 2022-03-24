@@ -17,6 +17,9 @@
 .reasons-header h2 {
   margin-bottom: 1rem;
 }
+.reasons-header h2 span {
+  display: inline-block;
+}
 .reasons-header h2 span:first-child {
   color: #036328;
 }
@@ -31,10 +34,10 @@
   text-align: center;
   justify-content: center;
 }
-.reason-list .col-sm-12 {
+.reason-list .col-xs-12 {
   margin-bottom: 5rem;
 }
-.reason-list .col-sm-12:last-child {
+.reason-list .col-xs-12:last-child {
   margin-bottom: 0;
 }
 .reason-list article {
@@ -59,7 +62,7 @@
   color: #ffffff;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
   .reason {
     padding: 15rem 0;
   }
@@ -67,7 +70,7 @@
   .reason-list {
     justify-content: space-between;
   }
-  .reason-list .col-sm-12 {
+  .reason-list .col-xs-12 {
     margin-bottom: 0;
   }
   .reason-list article {
