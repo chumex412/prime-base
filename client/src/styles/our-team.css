@@ -1,0 +1,52 @@
+.teams {
+  color: #191C23;
+  padding-bottom: 15rem;
+}
+.teams .col-xs-12 {
+  margin-bottom: 4rem;
+}
+.teams .col-xs-12:last-child {
+  margin-bottom: 0;
+}
+.teams h2 {
+  margin-bottom: 3.5rem;
+}
+.teams .card {
+  box-shadow: 0px 50px 100px rgba(171, 178, 196, 0.3);
+  border-radius: 2rem;
+}
+.teams .card-img-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.3rem;
+}
+.teams .card-img-top .social-medias {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.teams .card-body {
+  padding: 3.2rem 1.5rem;
+  text-align: center;
+  color: #FCFCFC;
+  background-color: #036328;
+}
+.teams .card-body h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.teams .card-body a {
+  color: #FCFCFC;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .teams .col-xs-12 {
+    margin-bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=our-team.css.map */
