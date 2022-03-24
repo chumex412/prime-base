@@ -22,11 +22,42 @@
 }
 .hero .hero-center h1, .hero .hero-center p {
   margin-bottom: 3rem;
+  will-change: transform;
+  text-transform: initial;
 }
 .hero .hero-center .hero-btn {
   background-color: #903B13;
   border: 1px solid #903B13;
   color: #ffffff;
+  transition-property: background, color;
+  -moz-transition-property: background, color;
+  -webkit-transition-property: background, color;
+  will-change: transform;
+}
+.hero .hero-center .breadcrumb-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+.hero .hero-center .breadcrumb-link.active {
+  color: #903B13;
+}
+.hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+.hero .breadcrumb a {
+  transition-property: color;
+}
+.hero .breadcrumb svg {
+  margin: 0 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .breadcrumb svg {
+    margin: 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=hero.css.map */
