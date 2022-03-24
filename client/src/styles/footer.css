@@ -2,6 +2,9 @@
   background-color: #191C23;
   padding: 5rem 0;
 }
+.footer-top svg {
+  display: inline-block;
+}
 
 .footer-bottom {
   padding: 3rem 0;

@@ -3,6 +3,10 @@
 .footer-top {
   background-color: $secondary-dark;
   padding: 5rem 0;
+
+  svg {
+    display: inline-block;
+  }
 }
 
 .footer-bottom {
