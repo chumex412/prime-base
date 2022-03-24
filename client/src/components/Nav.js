@@ -1,26 +1,32 @@
-import React, { useEffect, useRef} from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import MainLogo from './Mainlogo';
 import '../styles/nav.css';
 
 function Nav() {
+  const [fixed, setFixed] = useState(false);
+  const [open, setOPen] = useState(false)
 
   const containerRef = useRef(null);
   const linksRef = useRef(null); 
-  const navBar = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      const pageHeight = window.pageYOffset;
-      let navHeight = navBar.current.getBoundingClientRect().height;
+    window.addEventListener('scroll', handleNav);
+
+    return () => {
+      window.removeEventListener('scroll', handleNav)
+    }
+  });
+
+  const handleNav = () => {
+    const pageHeight = window.pageYOffset;
       
-      if(pageHeight > navHeight) {
-        navBar.current.classList.add('nav-fixed');
-      } else {
-        navBar.current.classList.remove('nav-fixed');
-      }
-    })
-  })
+    if(pageHeight > 98.5) {
+      setFixed(true)
+    } else {
+      setFixed(false);
+    }
+  }
 
   const toggleNavList = () => {
     const containerHeight = containerRef.current.getBoundingClientRect().height;
@@ -31,10 +37,12 @@ function Nav() {
     } else {
       containerRef.current.style.height = 0;
     }
+
+    setOPen(prev => ! prev)
   }
   
   return (
-    <nav className='nav-bar' ref={navBar}>
+    <nav className={`nav-bar ${fixed ? "nav-fixed" : ""}`} >
       <div className="container">
         <div className="nav-center">
           <div className="nav-header">
@@ -42,15 +50,17 @@ function Nav() {
               <MainLogo />
             </Link>
             <button 
-              aria-label="Nav links toggler icon" 
+              aria-labelledby="Hamburger toggle icon" 
               type="button" 
               className="hamburger-btn"
               onClick={toggleNavList}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="hamburger-toggle" fill="none" width="48" height="48"   viewBox="0 0 48 48">
-                <title>Hamburger icon</title>
+              <svg xmlns="http://www.w3.org/2000/svg" className="hamburger-toggle" width="48" height="48"   viewBox="0 0 48 48">
+                <title>Hamburger toggle icon</title>
                 <desc>Focusing/clicking icon shows or hids the nav links on a small screens</desc>
-                <path d="M6 36h36v-4H6v4Zm0-10h36v-4H6v4Zm0-14v4h36v-4H6Z"/>
+                <path stroke="#000" strokeWidth="4" d={ open ? "m12 36 23.7-23.7" : "M7 14h33.5" }/>
+                <path style={{ opacity: open ? 0 : 1 }} stroke="#000" strokeWidth="4" d="M7 24h33.5"/>
+                <path stroke="#000" strokeWidth="4" d={ open ? "m12 12 23.6 23.7" : "M7 34h33.5" }/>
               </svg>
             </button>
           </div>
