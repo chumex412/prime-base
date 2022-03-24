@@ -37,6 +37,8 @@ body {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   background-color: $off-white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 button, a {
