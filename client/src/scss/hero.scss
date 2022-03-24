@@ -25,12 +25,50 @@
 
     h1, p {
       margin-bottom: 3rem;
+      will-change: transform;
+      text-transform: initial;
     }
 
     .hero-btn {
       background-color: $accent-color;
       border: 1px solid $accent-color;
       color: #ffffff;
+      transition-property: background, color;
+      -moz-transition-property: background, color;
+      -webkit-transition-property: background, color;
+      will-change: transform;
+    }
+
+    .breadcrumb-link {
+      color: #ffffff;
+      text-decoration: none;
+
+      &.active {
+        color: $accent-color;
+      }
+    }
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    a {
+      transition-property: color;
+    }
+    svg {
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    .breadcrumb {
+      svg {
+        margin: 0 2rem;
+      }
     }
   }
 }
