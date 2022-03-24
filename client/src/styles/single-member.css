@@ -1,0 +1,107 @@
+.member .member-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5rem 11.5rem;
+  padding-top: 18rem;
+}
+.member h3 {
+  color: #191C23;
+  margin-bottom: 1.5rem;
+}
+.member .img-container {
+  max-width: 45.5rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 35rem;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.member .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.member .position {
+  color: #903B13;
+  font-weight: 700;
+}
+.member .contact-list {
+  color: #191C23;
+  list-style: none;
+  padding-top: 4rem;
+}
+.member .contact-list .contact-item {
+  margin-bottom: 2rem;
+}
+.member .contact-list h4 {
+  font-size: 2rem;
+  font-weight: 150%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 2.4rem;
+  margin-bottom: 1rem;
+}
+.member .contact-list h4::before {
+  content: "";
+  height: 0.9rem;
+  width: 0.9rem;
+  background-color: #903B13;
+  position: absolute;
+  left: 0;
+}
+.member .contact-list p {
+  padding: 0 2.4rem;
+}
+.member .social-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 6.3rem);
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+.member .background {
+  padding: 15rem 0;
+}
+.member .background h2 {
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .member .img-container {
+    height: 35.8vw;
+    margin: 0;
+  }
+  .member .member-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .member .contact-list h4 {
+    font-size: 2.7rem;
+  }
+  .member .contact-list h4::before {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .member .social-icons {
+    gap: 3rem;
+  }
+}
+@media only screen and (min-width: 790px) {
+  .member-info .img-container {
+    box-shadow: -5vw -3.5vw #FCFCFC, -6.2vw -4.6vw #E3CEC4, -4vw -4.6vw #E3CEC4, -6.2vw -2.4vw #E3CEC4;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .member .contact-list {
+    padding-top: 7rem;
+  }
+  .member .contact-list .contact-item {
+    margin-bottom: 3.5rem;
+  }
+  .member .social-icons {
+    padding-top: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=single-member.css.map */
