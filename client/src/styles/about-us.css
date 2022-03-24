@@ -1,29 +1,46 @@
 .about {
-  padding: 11.5rem 0 15rem;
+  padding: 0 0 15rem;
+  margin-top: 11.5rem;
 }
-.about .about-content .about-btn {
+.about .about-content.about-content_page {
+  padding: 3.5rem 0 0;
+  color: #191C23;
+}
+.about .about-content.about-content_page .about-header {
+  margin-bottom: 3.5rem;
+  overflow: hidden;
+}
+.about .about-content button.about-btn {
   background-color: #036328;
   border: #036328;
   color: #FFFFFF;
+  transition-property: background-color, color;
+  -moz-transition-property: background-color, color;
+  -webkit-transition-property: background-color, color;
 }
 .about .about-left img {
   border: 1px solid #036328;
   filter: drop-shadow(0px 50px 100px rgba(3, 99, 40, 0.15));
   border-radius: 15px;
+  display: inline-block;
 }
-.about .about-right {
+
+.about-right {
   padding-top: 5rem;
 }
-.about .about-right h2 {
+.about-right h2 {
   margin-bottom: 3rem;
 }
-.about .about-right h2 span:first-child {
+.about-right h2 span {
+  display: inline-block;
+}
+.about-right h2 span:first-child {
   color: #036328;
 }
-.about .about-right h2 span:last-child {
+.about-right h2 span:last-child {
   color: #903B13;
 }
-.about .about-right p {
+.about-right p {
   margin-bottom: 3rem;
 }
 
