@@ -3,13 +3,20 @@
 .nav-bar {
   background: $secondary-dark;
   opacity: 0.8;
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
   
   .nav-link {
     color: $off-white;
   }
 
   .hamburger-toggle {
-    fill: #ffffff;
+    path {
+      transition: all 0.3s ease;
+      stroke: #ffffff;
+      stroke-width: 4px;
+    }
   }
 }
 
@@ -29,7 +36,10 @@
   }
 
   .hamburger-toggle {
-    fill: $secondary-dark;
+     
+    path {
+      stroke: $secondary-dark;
+    }
   }
 }
 

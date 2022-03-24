@@ -1,12 +1,17 @@
 .nav-bar {
   background: #191C23;
   opacity: 0.8;
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
 }
 .nav-bar .nav-link {
   color: #FCFCFC;
 }
-.nav-bar .hamburger-toggle {
-  fill: #ffffff;
+.nav-bar .hamburger-toggle path {
+  transition: all 0.3s ease;
+  stroke: #ffffff;
+  stroke-width: 4px;
 }
 
 .nav-fixed {
@@ -23,8 +28,8 @@
 .nav-fixed .nav-link {
   color: #191C23;
 }
-.nav-fixed .hamburger-toggle {
-  fill: #191C23;
+.nav-fixed .hamburger-toggle path {
+  stroke: #191C23;
 }
 
 .nav-center {
