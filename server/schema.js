@@ -41,7 +41,27 @@ const MemberType = new GraphQLObjectType({
     member_firstname: { type: GraphQLString },
     member_lastname: { type: GraphQLString },
     member_image: { type: GraphQLString },
-    member_position: { type: GraphQLString } 
+    member_position: { type: GraphQLString },
+    member_label: { type: GraphQLString },
+    details: { type: DetailsType } 
+  })
+});
+
+const DetailsType = new GraphQLObjectType({
+  name: "details",
+  fields:() => ({
+    phone_number: { type: GraphQLString },
+    address: { type: GraphQLString },
+    background: { type: GraphQLString },
+    social_media: { type: new GraphQLList(SocialMediaType) }
+  })
+})
+
+const SocialMediaType = new GraphQLObjectType({ 
+  name: "social_media",
+  fields: () => ({
+    url: { type: GraphQLString },
+    media_id: { type: GraphQLString }
   })
 })
 
