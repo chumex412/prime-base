@@ -28,7 +28,7 @@ function Services() {
 
     masterTl.current = gsap.timeline({ paused: true })
 
-    masterTl.current.add(slideInTl(span1, { autoAlpha: 1, duration: 1 }), 1)
+    masterTl.current.add(slideInTl(span1, { autoAlpha: 1, duration: 0.5 }), 1)
       .add(slideInTl(span2, { autoAlpha: 1, duration: 1 }, 'back.out'), 0)
       .add(fadeInTl(childElem('.intro-text'), { duration: 0.5 }), '-=1')
 

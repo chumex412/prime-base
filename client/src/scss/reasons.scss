@@ -62,6 +62,18 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 2rem;
+
+    svg {
+      transition: transform 0.3s ease-out;
+      -moz-transition: transform 0.3s ease-out;
+      -webkit-transition: transform 0.3s ease-out;
+      
+      &:hover {
+        transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+      }
+    }
   }
 
   h3 {

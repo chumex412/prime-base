@@ -5,7 +5,7 @@ import '../styles/nav.css';
 
 function Nav() {
   const [fixed, setFixed] = useState(false);
-  const [open, setOPen] = useState(false)
+  const [open, setOPen] = useState(false);
 
   const containerRef = useRef(null);
   const linksRef = useRef(null); 
@@ -70,6 +70,7 @@ function Nav() {
                 <NavLink 
                   to='/' 
                   className={({ isActive }) => `top-link nav-link ${isActive ? "active" : ''}`}
+                  exact
                 >Home</NavLink>
               </li>
               <li className="nav-item">

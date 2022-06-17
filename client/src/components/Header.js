@@ -33,7 +33,7 @@ function Header({ pageInfo }) {
       cssRule: {width: 0, backgroundColor: 'rgba(25, 28, 35, 0.2)'} 
     }, { 
       cssRule: {width: "100%", backgroundColor: 'rgba(25, 28, 35, 0.9)' 
-    }, duration: 1, ease: 'power2.in' })
+    }, duration: 1, delay: 0.5, ease: 'power2.in' })
       
   })
 

@@ -22,7 +22,7 @@ function TeamItem({ id, firstname, lastname, image, position }) {
 
                 return (
                   <div className="icons" key={idx}>
-                    <span>{icon}</span>
+                    <a href="#">{icon}</a>
                     <span className="sr-only">{name}</span>
                   </div>
                 )

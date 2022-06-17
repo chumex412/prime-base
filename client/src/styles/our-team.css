@@ -15,18 +15,49 @@
   box-shadow: 0px 50px 100px rgba(171, 178, 196, 0.3);
   border-radius: 2rem;
 }
+.teams .card:hover .card-img-top::before {
+  height: 100%;
+}
+.teams .card:hover .social-medias {
+  transform: translateY(0);
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
 .teams .card-img-top {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: 1.3rem;
+  position: relative;
+  overflow: hidden;
+}
+.teams .card-img-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(25, 28, 35, 0.4);
+  width: 100%;
+  height: 0;
+  z-index: 2;
+  transition: height 0.3s ease-out;
+  -moz-transition: height 0.3s ease-out;
+  -webkit-transition: height 0.3s ease-out;
 }
 .teams .card-img-top .social-medias {
+  position: relative;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+  transform: translateY(150%);
+  -moz-transform: translateY(150%);
+  -webkit-transform: translateY(150%);
+  transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
 }
 .teams .card-body {
   padding: 3.2rem 1.5rem;

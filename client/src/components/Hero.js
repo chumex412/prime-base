@@ -16,17 +16,17 @@ function Hero({title, page1, page2}) {
   useLayoutEffect(() => {
     if(pathname === "/") {
       const heroContents = heroRef.children;
-      const tween = textPopUp(heroContents, { scale: 0, opacity: 0, delay: 0.5 });
+      const tween = textPopUp(heroContents, { scale: 0, opacity: 0, delay: 1 });
       
       return () => tween.kill()
     } else {
 
       const title = otherContent.querySelector('h1');
       const breadcrumb = otherContent.querySelector('.breadcrumb');
-      const tween1 = textPopUp(title, { scale: 0, delay: 0.5 });
+      const tween1 = textPopUp(title, { scale: 0, delay: 1 });
       const tween2 = gsap.from(breadcrumb.children, { 
-        x: -500, autoAlpha: 0, duration: 1, ease: 'power4.out', delay: 0.5, stagger: { 
-          amount: 1, 
+        x: -500, autoAlpha: 0, duration: 1, ease: 'power4.out', delay: 1, stagger: { 
+          amount: 0.5, 
           from: 'end' 
         } 
       })
@@ -52,7 +52,7 @@ function Hero({title, page1, page2}) {
     )
   }
 
-  if(pathname !== "/" && page1.length) {
+  if(pathname !== "/" && page1) {
     const newPage1 = page1.split(" ")[0];
     return (
       <section className="hero">
@@ -63,6 +63,7 @@ function Hero({title, page1, page2}) {
               <NavLink 
                 to="/" 
                 className={({ isActive }) => `h4 breadcrumb-link ${isActive ? "active" : ''}`}
+                exact
               >Home</NavLink>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="18" height="18" viewBox="0 0 18 18">
                 <path fill="#fff" d="M6.8 15.5a.9.9 0 0 1-.8-.6.8.8 0 0 1 .2-.9l5-5-5-5a.8.8 0 1 1 1.1-1.2L13 8.4a.8.8 0 0 1 0 1.2l-5.7 5.6c-.1.2-.3.3-.5.3Z"/>
@@ -89,6 +90,8 @@ function Hero({title, page1, page2}) {
         </div>  
       </section>
     )
+  } else {
+    return null
   }
 }
 

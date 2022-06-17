@@ -1,10 +1,6 @@
 @import './variables';
 
 .service-list {
-  _opacity: 0;
-  _transform: translateY(60px);
-  _-moz-transform: translateY(60px);
-  _-webkit-transform: translateY(60px);
 
   .col-xs-12 {
     margin-bottom: 4rem;
@@ -39,6 +35,20 @@
     &:focus, &:hover {
       background-color: transparent;
       opacity: 0.8;
+    }
+  }
+
+  .card-img-top {
+    svg {
+      transition: transform 0.3s ease-out;
+      -moz-transition: transform 0.3s ease-out;
+      -webkit-transition: transform 0.3s ease-out;
+      
+      &:hover {
+        transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+      }
     }
   }
 }

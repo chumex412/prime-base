@@ -6,7 +6,7 @@
   -webkit-transition: all 0.3s ease-out;
 }
 .nav-bar .nav-link {
-  color: #FCFCFC;
+  color: #ffffff;
 }
 .nav-bar .hamburger-toggle path {
   transition: all 0.3s ease;
@@ -74,9 +74,19 @@
 .nav-list .nav-link {
   padding: 1rem 2.5rem;
   text-decoration: none;
+  transform: translateY(0);
+  -moz-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  display: inline-block;
 }
 .nav-list .nav-link.active {
   color: #903B13;
+}
+.nav-list .nav-link:hover {
+  color: #ABB2C4;
+  transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
 }
 
 @media only screen and (min-width: 992px) {

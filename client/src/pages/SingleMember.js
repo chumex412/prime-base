@@ -7,7 +7,7 @@ import MemberDetails from '../components/MemberDetails';
 function SingleMember() {
   const {nameid} = useParams();
 
-  const name = nameid.split("+").splice(0, 2);
+  const name = nameid.split("+").slice(0, 2);
 
   return (
     <>

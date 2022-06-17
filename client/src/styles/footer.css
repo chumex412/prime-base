@@ -5,6 +5,9 @@
 .footer-top svg {
   display: inline-block;
 }
+.footer-top ul {
+  overflow: hidden;
+}
 
 .footer-bottom {
   padding: 3rem 0;
@@ -34,6 +37,7 @@
   margin-bottom: 4rem;
   font-size: 2rem;
   line-height: 120%;
+  will-change: transform;
 }
 .footer-center .footer-contact .footer-item {
   display: grid;

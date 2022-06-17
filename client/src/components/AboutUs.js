@@ -1,11 +1,13 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useLocation } from 'react-router-dom';
-import '../styles/about-us.css';
-import about_img from '../assets/about-img.png';
+import Goals from './Goals';
+import { missionData, visionData } from '../data/aboutData';
 import { fadeInTl, fadeOut } from './gsap/fadeAnimation';
 import { slideInTl } from './gsap/slideAnimation';
 import useIntersection from '../custom hook/useIntersection';
+import about_img from '../assets/about-img.png';
+import '../styles/about-us.css';
 
 function AboutUs() {
   const { pathname } = useLocation();
@@ -74,14 +76,24 @@ function AboutUs() {
       </article>
     </div>
   ) : (
-    <div className="about-content about-content_page" ref={contentRef}>
-      <h2 className="h3 about-header">About us</h2>
-      <article>
-        <p className="main-text">
-          We provide Geo-services such as Surveying And Mapping, Field Data Collection And Processing, Geographic Information System, Cadastral Survey And Civil Engineering Services. Delivering quality construction equipment for building purposes. We also provide building maintenance and solutions.
-        </p>  
-      </article> 
-    </div>
+    <>
+      <div className="about-content about-content_page" ref={contentRef}>
+        <h2 className="h3 about-header">About us</h2>
+        <article>
+          <p className="main-text">
+            We provide Geo-services such as Surveying And Mapping, Field Data Collection And Processing, Geographic Information System, Cadastral Survey And Civil Engineering Services. Delivering quality construction equipment for building purposes. We also provide building maintenance and solutions.
+          </p>  
+        </article> 
+      </div>
+      <Goals 
+        title="mission"
+        list={missionData}
+      />
+      <Goals 
+        title="vision"
+        list={visionData}
+      />
+    </>
   )
 
   return (

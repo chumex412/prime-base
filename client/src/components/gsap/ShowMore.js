@@ -16,11 +16,8 @@ const ShowContent = ({ children, visible, vars }) => {
       autoAlpha: 0,
       ease: 'power2.in'
     })
-    //.from(container, { height: height, ...vars, ease: 'power2.in' }, '-=0.5')
-
-    //console.log(tl.current.reversed())
-
-    return () => tl.current.progress(0).kill
+    
+    return () => tl.current.progress(0).kill()
 
   }, [])
 

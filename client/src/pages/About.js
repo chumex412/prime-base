@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import OurTeam from '../components/OurTeam';
 
 function About() {
+  
   return (
     <>
       <Header pageInfo={{title: "who we are", page1: "about us", page2: ""}} />

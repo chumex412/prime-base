@@ -54,6 +54,16 @@
   justify-content: center;
   margin: 0 auto 2rem;
 }
+.reason-list .reason-icon svg {
+  transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -webkit-transition: transform 0.3s ease-out;
+}
+.reason-list .reason-icon svg:hover {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
 .reason-list h3 {
   color: #903B13;
   margin-bottom: 2rem;

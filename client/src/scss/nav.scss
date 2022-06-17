@@ -8,7 +8,7 @@
   -webkit-transition: all 0.3s ease-out;
   
   .nav-link {
-    color: $off-white;
+    color: #ffffff;
   }
 
   .hamburger-toggle {
@@ -89,9 +89,20 @@
   .nav-link {
     padding: 1rem 2.5rem;
     text-decoration: none;
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    display: inline-block;
 
     &.active {
       color: $accent-color;
+    }
+
+    &:hover {
+      color: $light;
+      transform: translateY(-2px);
+      -moz-transform: translateY(-2px);
+      -webkit-transform: translateY(-2px);
     }
   }
 }

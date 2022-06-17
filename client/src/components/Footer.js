@@ -20,14 +20,16 @@ function Footer() {
   useLayoutEffect(() => {
     masterTl.current = gsap.timeline({ paused: true })
 
-    masterTl.current.add(fadeIn(childElem('.logo'), { scale: 1, duration: 1.5 }, 'bounce'))
-      .add(fadeIn(childElem('.footer-sub_nav h2'), { scale: 1, duration: 1.5 }, 'bounce'), '<')
-      .add(fadeIn(childElem('.footer-contact h2'), { scale: 1, duration: 1.5 }, 'bounce'), '<')
+    masterTl.current.add(fadeIn(childElem('.logo'), { scale: 1, duration: 1.5 }, 'back.out'))
+      .add(fadeIn(childElem('.footer-sub_nav h2'), { scale: 1, duration: 1.5 }, 'back.out'), '<')
+      .add(fadeIn(childElem('.footer-contact h2'), { scale: 1, duration: 1.5 }, 'back.out'), '')
+      .add(fadeIn(linksRef.children, { stagger: 0.5, duration: 1}), '-=0.5')
+      .add(fadeInTl(contactRef.children, { stagger: 0.5, duration: 1}), '<')
+
+      console.log(contactRef.children)
 
     if(isVisible) {
       masterTl.current.play()
-      fadeIn(linksRef.children, { stagger: 0.5, duration: 1})
-      fadeIn(contactRef.children, { stagger: 0.5, duration: 1})
     } else {
       fadeOut(childElem('.logo'), { scale: 0 })
       fadeOut(linksRef.children, { stagger: 0.1, y: 100 })

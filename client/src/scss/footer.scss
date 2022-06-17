@@ -7,6 +7,10 @@
   svg {
     display: inline-block;
   }
+
+  ul {
+    overflow: hidden;
+  }
 }
 
 .footer-bottom {
@@ -42,6 +46,7 @@
       margin-bottom: 4rem;
       font-size: 2rem;
       line-height: 120%;
+      will-change: transform;
     }
   }
 
